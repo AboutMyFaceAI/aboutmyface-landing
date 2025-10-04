@@ -10,7 +10,6 @@ export default function Footer() {
           <div className="footer-links">
             <a href="/privacy">Privacy</a>
             <a href="/terms">Terms</a>
-            <a href="mailto:support@aboutmyface.ai">Support</a>
           </div>
         </div>
         <div className="footer-bottom">

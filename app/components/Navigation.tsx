@@ -8,7 +8,6 @@ export default function Navigation() {
         </a>
         <div className="nav-links">
           <a href="/#features">What You'll Learn</a>
-          <a href="/privacy">Privacy</a>
           <a href="https://apps.apple.com/app/aboutmyface-ai" className="nav-cta" target="_blank" rel="noopener noreferrer">
             Get Started
           </a>
