@@ -11,14 +11,27 @@ body {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  background: #0a0a0f;
   color: #e2e8f0;
   min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(22, 194, 213, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+    linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+  z-index: -1;
 }
 
 a {
@@ -46,76 +59,215 @@ a:hover {
   justify-content: center;
   text-align: center;
   padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  pointer-events: none;
+  animation: float 20s ease-in-out infinite;
+}
+
+.glow-orb-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(22, 194, 213, 0.4) 0%, transparent 70%);
+  top: -250px;
+  left: -250px;
+}
+
+.glow-orb-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%);
+  bottom: -200px;
+  right: -200px;
+  animation-delay: -10s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(22, 194, 213, 0.1);
+  border: 1px solid rgba(22, 194, 213, 0.3);
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #16c2d5;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 8vw, 4rem);
-  font-weight: bold;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 700;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #16c2d5 0%, #13a8b8 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #16c2d5 50%, #8b5cf6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 .hero p {
-  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-size: clamp(1.1rem, 3vw, 1.25rem);
   color: #94a3b8;
-  max-width: 700px;
+  max-width: 680px;
   margin: 0 auto 3rem;
-  line-height: 1.6;
+  line-height: 1.7;
+  font-weight: 400;
 }
 
 .cta-button {
-  display: inline-block;
-  padding: 16px 40px;
-  background: linear-gradient(135deg, #16c2d5 0%, #13a8b8 100%);
-  color: #1a1a2e;
-  font-size: 1.2rem;
-  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 48px;
+  background: linear-gradient(135deg, #16c2d5 0%, #8b5cf6 100%);
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 600;
   border-radius: 50px;
   text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 15px rgba(22, 194, 213, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    0 4px 20px rgba(22, 194, 213, 0.4),
+    0 0 0 0 rgba(22, 194, 213, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #8b5cf6 0%, #16c2d5 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.cta-button svg {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.4s ease;
 }
 
 .cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(22, 194, 213, 0.4);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow:
+    0 8px 30px rgba(22, 194, 213, 0.5),
+    0 0 0 4px rgba(22, 194, 213, 0.2);
   text-decoration: none;
+}
+
+.cta-button:hover::before {
+  opacity: 1;
+}
+
+.cta-button:hover svg {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.cta-button:active {
+  transform: translateY(-1px) scale(0.98);
 }
 
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin: 4rem 0;
-  max-width: 1000px;
+  margin: 5rem 0 2rem;
+  max-width: 1100px;
 }
 
 .feature {
-  background: rgba(45, 45, 68, 0.5);
-  padding: 2rem;
-  border-radius: 16px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(22, 194, 213, 0.1);
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 2.5rem;
+  border-radius: 24px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top left, rgba(22, 194, 213, 0.1) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.feature:hover::before {
+  opacity: 1;
 }
 
 .feature:hover {
-  transform: translateY(-5px);
-  border-color: rgba(22, 194, 213, 0.3);
+  transform: translateY(-8px);
+  border-color: rgba(22, 194, 213, 0.4);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(22, 194, 213, 0.2) inset;
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(22, 194, 213, 0.1);
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  color: #16c2d5;
+  transition: all 0.4s ease;
+}
+
+.feature:hover .feature-icon {
+  background: rgba(22, 194, 213, 0.2);
+  transform: scale(1.1) rotate(5deg);
 }
 
 .feature h3 {
+  font-family: var(--font-space-grotesk), sans-serif;
   font-size: 1.5rem;
+  font-weight: 600;
   margin-bottom: 1rem;
-  color: #16c2d5;
+  color: #ffffff;
+  position: relative;
 }
 
 .feature p {
-  color: #cbd5e1;
-  line-height: 1.6;
+  color: #94a3b8;
+  line-height: 1.7;
+  font-size: 1rem;
+  position: relative;
 }
 
 .footer {
