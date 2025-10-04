@@ -1,22 +1,6 @@
 export default function Home() {
   return (
     <>
-      <nav className="navbar">
-        <div className="container nav-container">
-          <div className="nav-logo">
-            <span className="logo-icon">✨</span>
-            <span className="logo-text">AboutMyFace AI</span>
-          </div>
-          <div className="nav-links">
-            <a href="#features">What You'll Learn</a>
-            <a href="/privacy">Privacy</a>
-            <a href="https://apps.apple.com/app/aboutmyface-ai" className="nav-cta" target="_blank" rel="noopener noreferrer">
-              Get Started
-            </a>
-          </div>
-        </div>
-      </nav>
-
       <div className="hero">
         <div className="hero-bg">
           <div className="mesh-gradient"></div>
@@ -101,26 +85,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-brand">
-              <div className="footer-logo">AboutMyFace AI</div>
-              <p>AI-powered face reading for entertainment</p>
-            </div>
-            <div className="footer-links">
-              <a href="/privacy">Privacy</a>
-              <a href="/terms">Terms</a>
-              <a href="mailto:support@aboutmyface.ai">Support</a>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <p>© {new Date().getFullYear()} AboutMyFace AI. All rights reserved.</p>
-            <p className="disclaimer">For entertainment purposes only. Not professional advice.</p>
-          </div>
-        </div>
-      </footer>
     </>
   );
 }

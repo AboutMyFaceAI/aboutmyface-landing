@@ -120,14 +120,6 @@ export default function PrivacyPolicy() {
           Website: www.aboutmyface.ai
         </p>
       </section>
-
-      <div className="legal-footer">
-        <div className="footer-links">
-          <a href="/">Home</a>
-          <a href="/terms">Terms of Service</a>
-        </div>
-        <p>© {new Date().getFullYear()} AboutMyFace AI. All rights reserved.</p>
-      </div>
     </div>
   );
 }

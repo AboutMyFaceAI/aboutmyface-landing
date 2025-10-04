@@ -168,18 +168,13 @@ export default function TermsOfService() {
         </p>
       </section>
 
-      <div className="legal-footer">
-        <p style={{ marginBottom: '1.5rem', fontSize: '0.9rem', lineHeight: '1.6' }}>
+      <section>
+        <p style={{ fontSize: '0.9rem', lineHeight: '1.6', fontStyle: 'italic' }}>
           By using AboutMyFace AI, you acknowledge that you have read, understood, and agree to be
           bound by these Terms of Service. This is an entertainment app and should not be used for
           professional, medical, or legal purposes.
         </p>
-        <div className="footer-links">
-          <a href="/">Home</a>
-          <a href="/privacy">Privacy Policy</a>
-        </div>
-        <p>© {new Date().getFullYear()} AboutMyFace AI. All rights reserved.</p>
-      </div>
+      </section>
     </div>
   );
 }
