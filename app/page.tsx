@@ -46,16 +46,19 @@ export default function Home() {
 
           <div className="features-simple">
             <div className="feature-simple">
+              <div className="feature-icon">👤</div>
               <h3>Personality Traits</h3>
               <p>Understand your natural tendencies, communication style, and how others perceive you based on facial structure and features.</p>
             </div>
 
             <div className="feature-simple">
+              <div className="feature-icon">🧭</div>
               <h3>Life Path Insights</h3>
               <p>Explore potential career directions, relationship patterns, and areas where your unique characteristics create opportunity.</p>
             </div>
 
             <div className="feature-simple">
+              <div className="feature-icon">💎</div>
               <h3>Hidden Strengths</h3>
               <p>Discover qualities you may not recognize in yourself—talents and abilities revealed through physiognomic analysis.</p>
             </div>

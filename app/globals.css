@@ -251,6 +251,12 @@ a {
   text-align: center;
 }
 
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
 .feature-simple h3 {
   font-family: var(--font-space-grotesk), sans-serif;
   font-size: 1.5rem;
