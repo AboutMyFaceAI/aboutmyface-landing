@@ -1,6 +1,23 @@
 export default function Home() {
   return (
     <>
+      <nav className="navbar">
+        <div className="container nav-container">
+          <div className="nav-logo">
+            <span className="logo-icon">✨</span>
+            <span className="logo-text">AboutMyFace AI</span>
+          </div>
+          <div className="nav-links">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="/privacy">Privacy</a>
+            <a href="https://apps.apple.com/app/aboutmyface-ai" className="nav-cta" target="_blank" rel="noopener noreferrer">
+              Download App
+            </a>
+          </div>
+        </div>
+      </nav>
+
       <div className="hero">
         <div className="hero-bg">
           <div className="mesh-gradient"></div>
@@ -11,18 +28,18 @@ export default function Home() {
           <div className="hero-text">
             <div className="badge-pill">
               <span className="badge-icon">✨</span>
-              <span>Powered by Advanced AI</span>
+              <span>AI-Powered Face Reading</span>
             </div>
 
             <h1>
-              Your Face Tells
+              Discover What Your Face
               <br />
-              <span className="gradient-text">A Thousand Stories</span>
+              <span className="gradient-text">Reveals About You</span>
             </h1>
 
             <p className="hero-description">
-              Discover your hidden personality traits, life path insights, and mystical fortune through
-              cutting-edge AI facial analysis. Transform a simple selfie into profound self-discovery.
+              Unlock personality insights, life path guidance, and mystical wisdom through advanced AI facial analysis.
+              Transform a selfie into deep self-discovery.
             </p>
 
             <div className="cta-group">
@@ -36,27 +53,13 @@ export default function Home() {
                   <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
                 </svg>
                 Download for iOS
-                <svg className="arrow-icon" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"/>
-                </svg>
               </a>
-              <div className="app-badge">Free with Premium Features</div>
-            </div>
-
-            <div className="social-proof">
-              <div className="proof-item">
-                <div className="proof-number">50K+</div>
-                <div className="proof-label">Face Readings</div>
-              </div>
-              <div className="proof-divider"></div>
-              <div className="proof-item">
-                <div className="proof-number">4.8★</div>
-                <div className="proof-label">App Store Rating</div>
-              </div>
-              <div className="proof-divider"></div>
-              <div className="proof-item">
-                <div className="proof-number">10K+</div>
-                <div className="proof-label">Active Users</div>
+              <div className="trust-badges">
+                <span>⭐ 4.8 Rating</span>
+                <span>•</span>
+                <span>50K+ Users</span>
+                <span>•</span>
+                <span>Free to Start</span>
               </div>
             </div>
           </div>
@@ -101,7 +104,33 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="features-section">
+      <section id="how-it-works" className="how-it-works">
+        <div className="container">
+          <div className="section-header">
+            <h2>How It Works</h2>
+            <p>Get your AI face reading in three simple steps</p>
+          </div>
+          <div className="steps-grid">
+            <div className="step">
+              <div className="step-number">1</div>
+              <h3>Take a Selfie</h3>
+              <p>Use your phone camera or upload a photo</p>
+            </div>
+            <div className="step">
+              <div className="step-number">2</div>
+              <h3>AI Analyzes</h3>
+              <p>Advanced AI examines your facial features</p>
+            </div>
+            <div className="step">
+              <div className="step-number">3</div>
+              <h3>Get Insights</h3>
+              <p>Receive detailed personality and fortune readings</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" className="features-section">
         <div className="container">
           <div className="section-header">
             <h2>Unlock Deep Insights</h2>
