@@ -31,7 +31,6 @@ export default function Home() {
                 </svg>
                 Get Your Reading
               </a>
-              <p className="trust-line">Trusted by 50,000+ people seeking self-understanding</p>
             </div>
           </div>
         </div>
@@ -71,20 +70,6 @@ export default function Home() {
           <div className="credibility-content">
             <h2>Ancient Practice, Modern Technology</h2>
             <p>Face reading (physiognomy) has been studied across cultures for over 3,000 years. Our AI combines traditional wisdom with pattern recognition to provide personalized insights for self-reflection and personal growth.</p>
-            <div className="stats">
-              <div className="stat">
-                <div className="stat-number">50,000+</div>
-                <div className="stat-label">Readings Completed</div>
-              </div>
-              <div className="stat">
-                <div className="stat-number">4.8/5</div>
-                <div className="stat-label">User Rating</div>
-              </div>
-              <div className="stat">
-                <div className="stat-number">95%</div>
-                <div className="stat-label">Find It Insightful</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

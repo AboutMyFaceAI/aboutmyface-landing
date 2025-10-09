@@ -152,9 +152,9 @@ export default function TermsOfService() {
         <h2>13. Governing Law</h2>
         <p>
           These Terms shall be governed by and construed in accordance with the laws of the
-          jurisdiction in which AboutMyFace AI operates, without regard to its conflict of law
+          State of New Jersey, United States, without regard to its conflict of law
           provisions. Any disputes arising from these Terms or your use of the App shall be resolved
-          in the courts of that jurisdiction.
+          in the courts of New Jersey.
         </p>
       </section>
 
@@ -162,6 +162,8 @@ export default function TermsOfService() {
         <h2>14. Contact</h2>
         <p>Questions about these Terms? Contact us at:</p>
         <p>
+          GOOD VIBES FACTORY, LLC
+          <br />
           Email: support@aboutmyface.ai
           <br />
           Website: www.aboutmyface.ai

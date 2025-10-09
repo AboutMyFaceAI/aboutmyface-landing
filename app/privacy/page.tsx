@@ -115,6 +115,8 @@ export default function PrivacyPolicy() {
           If you have questions about this Privacy Policy or our privacy practices, please contact us at:
         </p>
         <p>
+          GOOD VIBES FACTORY, LLC
+          <br />
           Email: support@aboutmyface.ai
           <br />
           Website: www.aboutmyface.ai
